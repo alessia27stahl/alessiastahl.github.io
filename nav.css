@@ -1,0 +1,122 @@
+/* Mise en forme générale de la navigation */
+.site-header {
+  background-color: var(--bg-page);
+  transition: var(--transition-base);
+}
+
+/* Classe utilisée par menu.js pour masquer la navigation au scroll */
+.site-header-hidden {
+  transform: translateY(-100%);
+}
+
+/* Organisation du menu principal */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  padding-right: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-xl);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+/* Style du nom du portfolio */
+.nav-logo {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 125%;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Liste des liens de navigation */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Liens individuels du menu */
+.nav-link {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+/* Effet simple au survol des liens */
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+/* Icones visibles surtout sur mobile */
+.nav-icon {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 125%;
+}
+
+/* Texte des liens de navigation */
+.nav-text {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* Version mobile : navigation fixe en bas demandee dans le brief */
+@media (max-width: 768px) {
+  .site-header {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bg-page);
+  }
+
+  .site-nav {
+    justify-content: center;
+    padding-top: var(--spacing-sm);
+    padding-right: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    padding-left: var(--spacing-md);
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-links {
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--spacing-sm);
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 75%;
+  }
+}

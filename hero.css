@@ -1,0 +1,132 @@
+/* Reglages typographiques de base */
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+}
+
+/* Titres principaux du site */
+h1,
+h2,
+h3 {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  margin-top: 0;
+}
+
+/* Taille du titre de page */
+h1 {
+  font-size: 250%;
+}
+
+/* Taille des titres de section */
+h2 {
+  font-size: 175%;
+}
+
+/* Taille des titres de cartes */
+h3 {
+  font-size: 125%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.hero-text {
+  animation: fadeIn 0.8s ease 0.2s forwards; /* 0.2s delay so it fades after the title */
+  opacity: 0; /* start invisible */
+}
+
+/* Grande zone d'introduction */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-xl);
+}
+
+/* Titre principal de la banniere */
+.hero-title {
+  max-width: 900px;
+}
+
+/* Accroche courte sous le titre */
+.hero-text {
+  max-width: 720px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Image principale de la banniere */
+.hero-image {
+  border-radius: var(--radius-card);
+  object-fit: cover;
+  object-position: center;
+  max-height: 400px;
+}
+
+/* Section de presentation courte */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  padding-left: var(--spacing-xl);
+}
+
+/* Texte de presentation */
+.intro-text {
+  max-width: 720px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Zone du bouton d'action */
+.cta-section {
+  display: flex;
+  padding-top: var(--spacing-lg);
+  padding-right: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-xl);
+}
+
+/* Bouton principal */
+.cta-link {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-card);
+  color: var(--bg-page);
+  font-family: var(--font-body);
+  padding-top: var(--spacing-md);
+  padding-right: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+/* Effet au survol du bouton */
+.cta-link:hover {
+  background-color: var(--color-accent);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .intro-section,
+  .cta-section {
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
+  }
+}

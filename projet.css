@@ -1,0 +1,96 @@
+/* Page detail de projet */
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Grande image pleine largeur en haut */
+.project-hero-image {
+   border-radius: var(--radius-card);
+  width: 100% !important; 
+  max-height: 500px !important;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  display: block;
+}
+
+
+/* Contenu principal du projet */
+.project-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding-right: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-xl);
+}
+
+/* Metadonnees du projet */
+.project-detail-meta {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Texte principal du projet */
+.project-detail-text {
+  max-width: 760px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Grille des quatre placeholders demandes */
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* Bloc explicatif dans la page projet */
+.project-detail-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+/* Image de chaque bloc explicatif */
+.project-detail-image {
+  border-radius: var(--radius-card);
+}
+
+/* Titre des blocs explicatifs */
+.project-detail-title {
+  margin: 0;
+}
+
+/* Description des blocs explicatifs */
+.project-detail-description {
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Legende courte dans la page detail */
+.project-detail-caption {
+  color: var(--text-secondary);
+  font-size: 90%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .project-detail-content {
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
+  }
+
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

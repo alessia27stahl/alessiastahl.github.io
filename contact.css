@@ -1,0 +1,94 @@
+/* Section principale de contact */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-xl);
+}
+
+/* Texte d'introduction du contact */
+.contact-text {
+  max-width: 680px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Formulaire simple et lisible */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 850
+  px;
+  
+}
+
+/* Groupe label et champ */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* Labels du formulaire */
+.form-label {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+/* Champs de saisie */
+.form-input,
+.form-textarea {
+  background-color: var(--bg-card);
+  border-color: var(--bg-card);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--radius-card);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  padding-top: var(--spacing-md);
+  padding-right: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+/* Zone de message */
+.form-textarea {
+  min-height: 160px;
+}
+
+/* Bouton du formulaire */
+.form-button {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--radius-card);
+  color: var(--bg-page);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  padding-top: var(--spacing-md);
+  padding-right: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+  transition: var(--transition-base);
+}
+
+/* Survol du bouton du formulaire */
+.form-button:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
+  }
+}

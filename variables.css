@@ -1,0 +1,28 @@
+:root {
+  /* Couleurs */
+  --color-primary: #1A1A1A;
+  --color-accent: #ff0000;
+  --bg-page: #FFFDF7;
+  --bg-card: #F0EDE3;
+  --text-primary: #1A1A1A;
+  --text-secondary: #999999;
+
+  /* Typographie */
+  --font-heading: 'IBM Plex Mono', serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+
+  /* Espacements */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Divers */
+  --radius-card: 8px;
+  --transition-base: 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
